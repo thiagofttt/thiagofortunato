@@ -26,7 +26,7 @@ document.getElementById('confirmar').addEventListener('click', function() {
     const senha = document.getElementById('senha').value;
     const ghostMessage = document.getElementById('ghost');
 
-    if (senha === 'minhaprincesa123') {
+    if (senha === '23062024') {
         ghostMessage.style.display = 'block'; // Show the message
     } else {
         alert('Senha incorreta. Tente novamente.'); // Alert for incorrect password

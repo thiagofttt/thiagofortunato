@@ -153,116 +153,39 @@ footer {
     height: 6rem;
 }
 
-/* Responsividade para telas pequenas */
-@media (max-width: 768px) {
-    .box {
-        padding: 1rem;
-    }
-
-    .box p {
-        font-size: 1.5rem;
-    }
-
-    .box button {
-        width: 5rem;
-        height: 2.5rem;
-    }
-
-    .foto img {
-        height: auto;
-        width: 90%;
-    }
-
-    .texto {
-        width: 90%;
-        font-size: 1rem;
-        padding: 1rem;
-    }
-
-    .instrucoes input,
-    .instrucoes button {
-        width: 80%;
-        margin: 0.5rem 0;
-    }
-
-    .instrucoes h2 {
-        font-size: 1.2rem;
-    }
-
-    #contagem {
-        font-size: 1.2rem;
-    }
-}
-
-/* Responsividade para telas menores (como celulares em modo retrato) */
-@media (max-width: 480px) {
-    .box p {
-        font-size: 1.3rem;
-    }
-
-    .box button {
-        width: 5rem;
-        height: 2.5rem;
-    }
-
-    .foto img {
-        width: 100%;
-        height: auto;
-    }
-
-    .texto {
-        width: 100%;
-        font-size: 0.9rem;
-        padding: 1rem;
-    }
-
-    .instrucoes input,
-    .instrucoes button {
-        width: 90%;
-    }
-
-    .linha {
-        margin: 10px 0;
-    }
-
-    #contagem {
-        font-size: 1.2rem;
-    }
-}
-
-/* Responsividade para smartphones */
+/* Ajustes para telas menores, como smartphones */
 @media (max-width: 480px) {
     body {
         flex-direction: column;
+        height: auto; /* Permite que o conteúdo se ajuste ao tamanho do dispositivo */
         padding: 1rem;
     }
 
     .box {
-        height: auto; /* Permite que o conteúdo se ajuste dinamicamente */
+        height: auto; /* Ajusta dinamicamente a altura */
         padding: 1rem;
     }
 
     .box p {
-        font-size: 1.2rem; /* Reduz o tamanho do texto para caber na tela */
+        font-size: 1.5rem; /* Reduz o tamanho do texto */
         text-align: center;
     }
 
     .foto {
         height: auto; /* Remove o tamanho fixo */
-        width: 100%; /* Garante que a foto ocupe a largura total */
-        overflow: hidden;
+        width: 100%; /* A largura ocupa toda a tela */
+        overflow: hidden; /* Impede conteúdo extra de sair da div */
     }
 
     .foto img {
-        width: 100%; /* A imagem será proporcional à largura do dispositivo */
-        height: auto; /* Ajusta automaticamente a altura */
-        max-width: none; /* Remove limitações de tamanho */
+        width: 100%; /* Ajusta a imagem para ocupar a largura do dispositivo */
+        height: auto; /* Mantém a proporção correta */
     }
 
     .texto {
-        width: 100%; /* Usa toda a largura disponível */
+        width: 90%; /* Limita o texto para facilitar a leitura */
         font-size: 1rem; /* Ajusta o tamanho do texto */
-        text-align: center; /* Garante alinhamento central */
+        text-align: center;
         padding: 1rem;
     }
 
@@ -271,23 +194,25 @@ footer {
         text-align: center;
     }
 
-    .instrucoes h2 {
-        font-size: 1.2rem;
-    }
-
     .instrucoes input,
     .instrucoes button {
-        width: 90%; /* Garante que os inputs e botões ocupem quase toda a largura */
+        width: 90%; /* Faz os inputs e botões ocuparem quase toda a largura */
         margin: 0.5rem 0;
+    }
+
+    .linha {
+        width: 80%; /* Torna a linha mais proporcional ao tamanho da tela */
+        margin: 10px auto; /* Centraliza e espaça */
     }
 
     .contagem2 h1,
     .contagem2 #contagem {
-        font-size: 1.2rem; /* Reduz o texto para caber melhor na tela */
+        font-size: 1.2rem; /* Ajusta o texto da contagem */
     }
 
-    .linha {
-        width: 70%; /* Torna a linha mais curta */
-        margin: 10px auto; /* Centraliza e espaça */
+    .box-2 ol {
+        font-size: 0.9rem; /* Reduz o tamanho do texto para se adaptar */
+        line-height: 1.8; /* Ajusta o espaçamento entre as linhas */
     }
 }
+
