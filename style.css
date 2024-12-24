@@ -1,0 +1,281 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgba(5, 9, 53, 0.822);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: white;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+.box p {
+    font-size: 2rem;
+    font-weight: 900;
+    padding-bottom: 1.5rem;
+}
+
+.box button {
+    border: none;
+    width: 6rem;
+    margin: 1rem; /* Adiciona margem em todos os lados */
+    height: 3rem;
+    border-radius: 0.3rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.sim {
+    background-color: rgb(29, 223, 29);
+}
+
+.nao {
+    background-color: red;
+    transition: transform 0.3s ease; /* Transição suave para o movimento */
+}
+
+/* INSTRUCOES */
+.box-2 {
+    padding-top: 2rem;
+    text-align: center; /* Garante que o conteúdo dentro de .box-2 seja centralizado */
+}
+
+.foto {
+    position: relative; /* Necessário para o posicionamento absoluto das imagens */
+    width: 100%;  /* Garante que a div ocupe toda a largura */
+    height: 700px; /* Ajuste conforme o tamanho desejado */
+    overflow: hidden; /* Impede que as imagens saiam da área visível */
+    display: flex; /* Usado para garantir que o conteúdo interno fique centralizado */
+    justify-content: center; /* Centraliza as imagens horizontalmente */
+    align-items: center; /* Centraliza as imagens verticalmente */
+}
+
+.foto img {
+    display: block;
+    margin: 0 auto 1.5rem;
+    max-width: 100%;
+    height: 700px;
+    width: 500px;
+    border-radius: 10px;
+    border: solid 0.1rem white;
+}
+
+.foto-imagem {
+    position: absolute;
+    top: 50%; /* Posiciona a imagem no meio da altura da div */
+    left: 50%; /* Posiciona a imagem no meio da largura da div */
+    transform: translate(-50%, -50%); /* Ajusta a posição para que o centro da imagem coincida com o centro da div */
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Faz com que a imagem cubra completamente a área disponível */
+    opacity: 0; /* Inicialmente invisível */
+    transition: opacity 1s ease-in-out; /* Transição suave ao aparecer */
+}
+
+.foto-imagem.active {
+    opacity: 1; /* Torna a imagem visível quando a classe 'active' for adicionada */
+}
+.contagem2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+    padding-bottom: 2rem;
+}
+
+#contagem {
+    font-size: 1.5rem;
+}
+
+.texto {
+    padding-top: 2rem;
+    text-align: center;
+    width: 40rem;
+    font-size: 1rem;
+    padding-bottom: 2rem;
+}
+
+.instrucoes {
+    padding-top: 2rem;
+    text-align: center;
+}
+
+.instrucoes h2 {
+    padding-bottom: 1.5rem;
+}
+
+#ghost {
+    display: none;
+}
+
+.box-2 ol {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    line-height: 2.6;
+    list-style-position: inside; /* Faz a numeração ficar dentro do item */
+}
+
+.instrucoes input {
+    width: 14rem;
+    height: 2.4rem;
+    border-radius: 0.2rem;
+    border: none;
+}
+
+.instrucoes button {
+    height: 2.4rem;
+    width: 5rem;
+    border: none;
+    border-radius: 0.2rem;
+    cursor: pointer;
+}
+
+.linha {
+    width: 35%; /* Ajuste a largura da linha */
+    height: 2px; /* Espessura da linha */
+    background-color: #ffffff; /* Cor da linha */
+    border: none; /* Remove a borda padrão */
+    margin: 20px auto; /* Centraliza a linha na página */
+}
+
+footer {
+    height: 6rem;
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 768px) {
+    .box {
+        padding: 1rem;
+    }
+
+    .box p {
+        font-size: 1.5rem;
+    }
+
+    .box button {
+        width: 5rem;
+        height: 2.5rem;
+    }
+
+    .foto img {
+        height: auto;
+        width: 90%;
+    }
+
+    .texto {
+        width: 90%;
+        font-size: 1rem;
+        padding: 1rem;
+    }
+
+    .instrucoes input,
+    .instrucoes button {
+        width: 80%;
+        margin: 0.5rem 0;
+    }
+
+    .instrucoes h2 {
+        font-size: 1.2rem;
+    }
+
+    #contagem {
+        font-size: 1.2rem;
+    }
+}
+
+/* Responsividade para telas menores (como celulares em modo retrato) */
+@media (max-width: 480px) {
+    .box p {
+        font-size: 1.3rem;
+    }
+
+    .box button {
+        width: 5rem;
+        height: 2.5rem;
+    }
+
+    .foto img {
+        width: 100%;
+        height: auto;
+    }
+
+    .texto {
+        width: 100%;
+        font-size: 0.9rem;
+        padding: 1rem;
+    }
+
+    .instrucoes input,
+    .instrucoes button {
+        width: 90%;
+    }
+
+    .linha {
+        margin: 10px 0;
+    }
+
+    #contagem {
+        font-size: 1.2rem;
+    }
+}
+
+/* Responsividade para smartphones */
+@media (max-width: 480px) {
+    .box {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .box p {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .box button {
+        width: 5rem;
+        height: 2.5rem;
+    }
+
+    .foto {
+        height: 300px; /* Ajusta a altura das imagens */
+    }
+
+    .foto img {
+        width: 100%;
+        height: auto;
+    }
+
+    .texto {
+        width: 90%;
+        font-size: 1rem;
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .instrucoes input,
+    .instrucoes button {
+        width: 90%; /* Deixa os inputs e botões ocuparem toda a largura disponível */
+        margin: 0.5rem auto;
+    }
+
+    .linha {
+        width: 70%; /* Reduz a largura da linha */
+        margin: 1rem auto;
+    }
+
+    .contagem2 h1,
+    .contagem2 #contagem {
+        font-size: 1.2rem;
+    }
+}
