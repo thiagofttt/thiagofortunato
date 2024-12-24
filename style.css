@@ -154,6 +154,7 @@ footer {
         font-size: 1rem; /* Mantém o tamanho da fonte adequado */
         padding: 1rem; /* Ajusta o espaçamento interno */
         text-align: center;
+        margin: 0 auto;
     }
 
     /* Ajusta a largura dos botões */
