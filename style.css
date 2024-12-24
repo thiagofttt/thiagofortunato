@@ -187,8 +187,11 @@ footer {
     }
 
     .texto {
-        font-size: 0.9rem; /* Reduz o texto para caber melhor */
-        width: 90%; /* Ajusta a largura do texto */
+        font-size: 0.9rem; /* Texto menor para dispositivos menores */
+        width: 90%; /* Garante que a largura seja adequada para telas pequenas */
+        margin: 0 auto; /* Centraliza horizontalmente */
+        text-align: center; /* Alinha o texto ao centro */
+        padding: 1rem; /* Adiciona espaçamento interno */
     }
 
     .instrucoes input {
