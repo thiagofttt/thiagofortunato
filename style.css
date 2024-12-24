@@ -81,7 +81,7 @@ body {
 }
 
 #contagem {
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 
 .texto {
@@ -177,6 +177,18 @@ footer {
         justify-content: center; /* Centraliza o título horizontalmente */
         width: 100%; /* Garante que ocupe toda a largura */
     }
+    
+    .instrucoes{
+        width: 90%;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .contagem2{
+        width: 90%;
+        text-align: center;
+        margin: 0 auto;
+    }
 }
 
 /* Media query para telas pequenas, como smartphones */
@@ -198,8 +210,10 @@ footer {
 
     /* Alinha o conteúdo corretamente em telas muito pequenas */
     .box {
-        height: auto; /* Deixa a altura da caixa adaptável */
-        padding: 1rem; /* Adiciona espaçamento para evitar sobrecarga */
-        align-items: center;
+        display: flex;
+        flex-direction: column; /* Garante que a direção seja coluna para que o conteúdo se empilhe */
+        justify-content: center; /* Alinha verticalmente o conteúdo */
+        align-items: center; /* Alinha horizontalmente o conteúdo */
+        height: 100vh; /* Garante que a altura ocupe toda a tela */
     }
 }
