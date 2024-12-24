@@ -153,6 +153,7 @@ footer {
         width: 90%; /* Aumenta a largura do texto em telas menores */
         font-size: 1rem; /* Mantém o tamanho da fonte adequado */
         padding: 1rem; /* Ajusta o espaçamento interno */
+        text-align: center;
     }
 
     /* Ajusta a largura dos botões */
