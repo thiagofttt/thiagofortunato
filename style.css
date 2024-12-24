@@ -164,6 +164,7 @@ footer {
         font-size: 1rem; /* Ajusta o tamanho da fonte para os botões */
     }
 
+    /* Alinha os botões lado a lado */
     .box > div {
         display: flex;
         justify-content: space-between; /* Garante que os botões fiquem lado a lado */
