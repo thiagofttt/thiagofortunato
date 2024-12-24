@@ -1,3 +1,5 @@
+/* Código geral permanece o mesmo */
+
 * {
     margin: 0;
     padding: 0;
@@ -56,7 +58,6 @@ body {
     position: relative; /* Necessário para o posicionamento absoluto das imagens */
     width: 100%;  /* Garante que a div ocupe toda a largura */
     height: 700px; /* Ajuste conforme o tamanho desejado */
-    overflow: hidden; /* Impede que as imagens saiam da área visível */
     display: flex; /* Usado para garantir que o conteúdo interno fique centralizado */
     justify-content: center; /* Centraliza as imagens horizontalmente */
     align-items: center; /* Centraliza as imagens verticalmente */
@@ -66,27 +67,12 @@ body {
     display: block;
     margin: 0 auto 1.5rem;
     max-width: 100%;
-    height: 700px;
-    width: 500px;
+    height: 45rem;
+    width: 43rem;
     border-radius: 10px;
     border: solid 0.1rem white;
 }
 
-.foto-imagem {
-    position: absolute;
-    top: 50%; /* Posiciona a imagem no meio da altura da div */
-    left: 50%; /* Posiciona a imagem no meio da largura da div */
-    transform: translate(-50%, -50%); /* Ajusta a posição para que o centro da imagem coincida com o centro da div */
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Faz com que a imagem cubra completamente a área disponível */
-    opacity: 0; /* Inicialmente invisível */
-    transition: opacity 1s ease-in-out; /* Transição suave ao aparecer */
-}
-
-.foto-imagem.active {
-    opacity: 1; /* Torna a imagem visível quando a classe 'active' for adicionada */
-}
 .contagem2 {
     text-align: center;
     margin-bottom: 1.5rem;
@@ -153,58 +139,58 @@ footer {
     height: 6rem;
 }
 
-@media (max-width: 480px) {
-    body {
-        font-size: 14px; /* Reduz o tamanho da fonte */
-        padding: 1rem; /* Adiciona espaçamento ao redor */
+/* Media query para dispositivos móveis */
+@media (max-width: 768px) {
+    /* Ajusta a largura das imagens */
+    .foto img {
+        height: auto; /* Deixa a altura da imagem adaptável */
+        width: 90%; /* Ajusta a largura da imagem para caber na tela */
+        max-width: 100%; /* Garante que a imagem não ultrapasse a largura disponível */
     }
 
-    .box {
+    /* Ajusta a largura do texto para dispositivos móveis */
+    .texto {
+        width: 90%; /* Aumenta a largura do texto em telas menores */
+        font-size: 1rem; /* Mantém o tamanho da fonte adequado */
         padding: 1rem; /* Ajusta o espaçamento interno */
     }
 
-    .foto {
-        height: auto; /* Ajusta altura dinamicamente */
-        display: block; /* Garante que as imagens fiquem em um layout vertical */
-    }
-
-    .foto-imagem {
-        width: 100%; /* Ajusta para ocupar toda a largura */
-        max-width: none; /* Remove o limite de largura */
-        height: auto; /* Mantém a proporção da imagem */
-        margin: 0 auto 1rem; /* Adiciona espaçamento inferior */
-    }
-
-    .titulo p {
-        font-size: 1.5rem; /* Reduz tamanho do texto */
-        text-align: center; /* Centraliza o título */
-    }
-
+    /* Ajusta a largura dos botões */
     .box button {
-        width: 100%; /* Botões ocupam toda a largura */
-        font-size: 0.9rem; /* Ajusta tamanho da fonte */
-        margin: 0.5rem 0; /* Adiciona espaçamento vertical */
+        width: 40%; /* Ajusta a largura dos botões */
+        margin: 0.5rem; /* Adiciona mais espaçamento entre os botões */
+        font-size: 1rem; /* Ajusta o tamanho da fonte para os botões */
     }
 
+    .box > div {
+        display: flex;
+        justify-content: space-between; /* Garante que os botões fiquem lado a lado */
+        width: 100%;
+        padding: 0 1rem; /* Adiciona espaçamento lateral */
+    }
+}
+
+/* Media query para telas pequenas, como smartphones */
+@media (max-width: 480px) {
+    .foto {
+        height: 400px; /* Ajusta a altura das imagens para telas muito pequenas */
+    }
+
+    /* Ajusta o texto para telas pequenas */
     .texto {
-        font-size: 0.9rem; /* Texto menor para dispositivos menores */
-        width: 90%; /* Garante que a largura seja adequada para telas pequenas */
-        margin: 0 auto; /* Centraliza horizontalmente */
-        text-align: center; /* Alinha o texto ao centro */
-        padding: 1rem; /* Adiciona espaçamento interno */
+        width: 90%; /* Garante que o texto ocupe toda a largura */
+        font-size: 0.9rem; /* Ajusta o tamanho da fonte */
     }
 
-    .instrucoes input {
-        width: 100%; /* Campo de senha ocupa toda a largura */
-        font-size: 0.9rem;
+    /* Ajusta os botões para telas menores */
+    .box button {
+        width: 40%; /* Reduz a largura dos botões para telas muito pequenas */
+        font-size: 0.9rem; /* Ajusta o tamanho da fonte */
     }
 
-    .instrucoes button {
-        width: 100%; /* Botão ocupa toda a largura */
-        font-size: 0.9rem;
-    }
-
-    .linha {
-        width: 80%; /* Linha horizontal ocupa menos espaço */
+    /* Alinha o conteúdo corretamente em telas muito pequenas */
+    .box {
+        height: auto; /* Deixa a altura da caixa adaptável */
+        padding: 1rem; /* Adiciona espaçamento para evitar sobrecarga */
     }
 }

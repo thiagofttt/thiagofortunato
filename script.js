@@ -65,24 +65,3 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-
-document.addEventListener('DOMContentLoaded', function () {
-    const imagens = document.querySelectorAll('.foto-imagem');
-    if (imagens.length === 0) {
-        console.error('Nenhuma imagem encontrada. Verifique seu HTML.');
-        return;
-    }
-
-    let index = 0;
-
-    function alternarImagens() {
-        imagens.forEach((img) => img.classList.remove('active'));
-        imagens[index].classList.add('active');
-        index = (index + 1) % imagens.length;
-    }
-
-    setInterval(alternarImagens, 3000);
-    alternarImagens();
-});
-
-
