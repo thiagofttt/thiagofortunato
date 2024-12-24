@@ -153,66 +153,103 @@ footer {
     height: 6rem;
 }
 
-/* Ajustes para telas menores, como smartphones */
-@media (max-width: 480px) {
-    body {
-        flex-direction: column;
-        height: auto; /* Permite que o conteúdo se ajuste ao tamanho do dispositivo */
-        padding: 1rem;
-    }
+/* Existing CSS here... */
 
-    .box {
-        height: auto; /* Ajusta dinamicamente a altura */
-        padding: 1rem;
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 1rem; /* Add some padding for smaller screens */
     }
 
     .box p {
-        font-size: 1.5rem; /* Reduz o tamanho do texto */
-        text-align: center;
+        font-size: 1.5rem; /* Reduce font size for smaller screens */
+    }
+
+    .box button {
+        width: 5rem; /* Adjust button width */
+        height: 2.5rem; /* Adjust button height */
+        font-size: 0.9rem; /* Reduce font size */
     }
 
     .foto {
-        height: auto; /* Remove o tamanho fixo */
-        width: 100%; /* A largura ocupa toda a tela */
-        overflow: hidden; /* Impede conteúdo extra de sair da div */
+        height: 400px; /* Reduce height of the image container */
     }
 
     .foto img {
-        width: 100%; /* Ajusta a imagem para ocupar a largura do dispositivo */
-        height: auto; /* Mantém a proporção correta */
+        height: auto; /* Allow height to adjust automatically */
+        width: 100%; /* Make image responsive */
     }
 
     .texto {
-        width: 90%; /* Limita o texto para facilitar a leitura */
-        font-size: 1rem; /* Ajusta o tamanho do texto */
-        text-align: center;
-        padding: 1rem;
+        width: 90%; /* Make text container responsive */
+        font-size: 0.9rem; /* Reduce font size */
     }
 
-    .instrucoes {
-        padding: 1rem;
-        text-align: center;
+    .instrucoes input {
+        width: 80%; /* Make input field responsive */
     }
 
-    .instrucoes input,
     .instrucoes button {
-        width: 90%; /* Faz os inputs e botões ocuparem quase toda a largura */
-        margin: 0.5rem 0;
+        width: 40%; /* Adjust button width */
+    }
+
+    .contagem2 {
+        font-size: 1.2rem; /* Reduce font size */
+    }
+
+    #contagem {
+        font-size: 1.2rem; /* Reduce font size */
     }
 
     .linha {
-        width: 80%; /* Torna a linha mais proporcional ao tamanho da tela */
-        margin: 10px auto; /* Centraliza e espaça */
+        width: 80%; /* Make line responsive */
     }
 
-    .contagem2 h1,
-    .contagem2 #contagem {
-        font-size: 1.2rem; /* Ajusta o texto da contagem */
-    }
-
-    .box-2 ol {
-        font-size: 0.9rem; /* Reduz o tamanho do texto para se adaptar */
-        line-height: 1.8; /* Ajusta o espaçamento entre as linhas */
+    footer {
+        height: 4rem; /* Adjust footer height */
     }
 }
 
+@media (max-width: 480px) {
+    .box p {
+        font-size: 1.2rem; /* Further reduce font size for very small screens */
+    }
+
+    .box button {
+        width: 4rem; /* Further adjust button width */
+        height: 2rem; /* Further adjust button height */
+        font-size: 0.8rem; /* Further reduce font size */
+    }
+
+    .foto {
+        height: 300px; /* Further reduce height of the image container */
+    }
+
+    .texto {
+        font-size: 0.8rem; /* Further reduce font size */
+    }
+
+    .instrucoes input {
+        width: 90%; /* Make input field more responsive */
+    }
+
+    .instrucoes button {
+        width: 50%; /* Adjust button width */
+    }
+
+    .contagem2 {
+        font-size: 1rem; /* Further reduce font size */
+    }
+
+    #contagem {
+        font-size: 1rem; /* Further reduce font size */
+    }
+
+    .linha {
+        width: 90%; /* Make line more responsive */
+    }
+
+    footer {
+        height: 3rem; /* Further adjust footer height */
+    }
+}
