@@ -68,24 +68,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
 document.addEventListener('DOMContentLoaded', function () {
     const imagens = document.querySelectorAll('.foto-imagem');
-    let index = 0; // Inicia com a primeira imagem
+    if (imagens.length === 0) {
+        console.error('Nenhuma imagem encontrada. Verifique seu HTML.');
+        return;
+    }
 
-    // Função para alternar as imagens
+    let index = 0;
+
     function alternarImagens() {
-        // Remove a classe 'active' de todas as imagens
         imagens.forEach((img) => img.classList.remove('active'));
-
-        // Adiciona a classe 'active' à imagem atual
         imagens[index].classList.add('active');
-
-        // Atualiza o índice para a próxima imagem, e volta para 0 quando chega ao fim
         index = (index + 1) % imagens.length;
     }
 
-    // Chama a função para alternar imagens a cada 3 segundos
     setInterval(alternarImagens, 3000);
-
-    // Exibe a primeira imagem ao carregar
     alternarImagens();
 });
+
 

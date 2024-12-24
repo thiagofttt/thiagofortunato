@@ -153,103 +153,55 @@ footer {
     height: 6rem;
 }
 
-/* Existing CSS here... */
-
-/* Media Queries for Responsive Design */
-@media (max-width: 768px) {
-    body {
-        padding: 1rem; /* Add some padding for smaller screens */
-    }
-
-    .box p {
-        font-size: 1.5rem; /* Reduce font size for smaller screens */
-    }
-
-    .box button {
-        width: 5rem; /* Adjust button width */
-        height: 2.5rem; /* Adjust button height */
-        font-size: 0.9rem; /* Reduce font size */
-    }
-
-    .foto {
-        height: 400px; /* Reduce height of the image container */
-    }
-
-    .foto img {
-        height: auto; /* Allow height to adjust automatically */
-        width: 100%; /* Make image responsive */
-    }
-
-    .texto {
-        width: 90%; /* Make text container responsive */
-        font-size: 0.9rem; /* Reduce font size */
-    }
-
-    .instrucoes input {
-        width: 80%; /* Make input field responsive */
-    }
-
-    .instrucoes button {
-        width: 40%; /* Adjust button width */
-    }
-
-    .contagem2 {
-        font-size: 1.2rem; /* Reduce font size */
-    }
-
-    #contagem {
-        font-size: 1.2rem; /* Reduce font size */
-    }
-
-    .linha {
-        width: 80%; /* Make line responsive */
-    }
-
-    footer {
-        height: 4rem; /* Adjust footer height */
-    }
-}
-
 @media (max-width: 480px) {
-    .box p {
-        font-size: 1.2rem; /* Further reduce font size for very small screens */
+    body {
+        font-size: 14px; /* Reduz o tamanho da fonte */
+        padding: 1rem; /* Adiciona espaçamento ao redor */
     }
 
-    .box button {
-        width: 4rem; /* Further adjust button width */
-        height: 2rem; /* Further adjust button height */
-        font-size: 0.8rem; /* Further reduce font size */
+    .box {
+        padding: 1rem; /* Ajusta o espaçamento interno */
     }
 
     .foto {
-        height: 300px; /* Further reduce height of the image container */
+        height: auto; /* Ajusta altura dinamicamente */
+        display: block; /* Garante que as imagens fiquem em um layout vertical */
+    }
+
+    .foto-imagem {
+        width: 100%; /* Ajusta para ocupar toda a largura */
+        max-width: none; /* Remove o limite de largura */
+        height: auto; /* Mantém a proporção da imagem */
+        margin: 0 auto 1rem; /* Adiciona espaçamento inferior */
+    }
+
+    .titulo p {
+        font-size: 1.5rem; /* Reduz tamanho do texto */
+        text-align: center; /* Centraliza o título */
+    }
+
+    .box button {
+        width: 100%; /* Botões ocupam toda a largura */
+        font-size: 0.9rem; /* Ajusta tamanho da fonte */
+        margin: 0.5rem 0; /* Adiciona espaçamento vertical */
     }
 
     .texto {
-        font-size: 0.8rem; /* Further reduce font size */
+        font-size: 0.9rem; /* Reduz o texto para caber melhor */
+        width: 90%; /* Ajusta a largura do texto */
     }
 
     .instrucoes input {
-        width: 90%; /* Make input field more responsive */
+        width: 100%; /* Campo de senha ocupa toda a largura */
+        font-size: 0.9rem;
     }
 
     .instrucoes button {
-        width: 50%; /* Adjust button width */
-    }
-
-    .contagem2 {
-        font-size: 1rem; /* Further reduce font size */
-    }
-
-    #contagem {
-        font-size: 1rem; /* Further reduce font size */
+        width: 100%; /* Botão ocupa toda a largura */
+        font-size: 0.9rem;
     }
 
     .linha {
-        width: 90%; /* Make line more responsive */
-    }
-
-    footer {
-        height: 3rem; /* Further adjust footer height */
+        width: 80%; /* Linha horizontal ocupa menos espaço */
     }
 }
