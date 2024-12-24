@@ -178,7 +178,7 @@ footer {
 
     /* Ajusta o texto para telas pequenas */
     .texto {
-        width: 90%; /* Garante que o texto ocupe toda a largura */
+        width: 100%; /* Garante que o texto ocupe toda a largura */
         font-size: 0.9rem; /* Ajusta o tamanho da fonte */
     }
 
