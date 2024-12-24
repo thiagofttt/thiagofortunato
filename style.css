@@ -81,7 +81,7 @@ body {
 }
 
 #contagem {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
 }
 
 .texto {
@@ -157,19 +157,25 @@ footer {
         margin: 0 auto;
     }
 
-    /* Ajusta a largura dos botões */
-    .box button {
-        width: 40%; /* Ajusta a largura dos botões */
-        margin: 0.5rem; /* Adiciona mais espaçamento entre os botões */
-        font-size: 1rem; /* Ajusta o tamanho da fonte para os botões */
-    }
-
-    /* Alinha os botões lado a lado */
+    /* Ajusta a largura dos botões e os mantém alinhados na horizontal */
     .box > div {
         display: flex;
-        justify-content: space-between; /* Garante que os botões fiquem lado a lado */
+        justify-content: center; /* Garante que os botões fiquem lado a lado */
         width: 100%;
         padding: 0 1rem; /* Adiciona espaçamento lateral */
+    }
+
+    .box button {
+        margin: 0.5rem; /* Adiciona mais espaçamento entre os botões */
+        font-size: 1rem; /* Ajusta o tamanho da fonte para os botões */
+        width: 6rem; /* Garante que os botões não se estiquem mais do que o esperado */
+    }
+
+    /* Centraliza o título com os botões */
+    .titulo {
+        display: flex;
+        justify-content: center; /* Centraliza o título horizontalmente */
+        width: 100%; /* Garante que ocupe toda a largura */
     }
 }
 
@@ -187,7 +193,6 @@ footer {
 
     /* Ajusta os botões para telas menores */
     .box button {
-        width: 40%; /* Reduz a largura dos botões para telas muito pequenas */
         font-size: 0.9rem; /* Ajusta o tamanho da fonte */
     }
 
@@ -195,5 +200,6 @@ footer {
     .box {
         height: auto; /* Deixa a altura da caixa adaptável */
         padding: 1rem; /* Adiciona espaçamento para evitar sobrecarga */
+        align-items: center;
     }
 }
