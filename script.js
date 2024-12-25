@@ -40,7 +40,7 @@ document.getElementById('ghost').style.display = 'none';
 
 document.addEventListener('DOMContentLoaded', () => {
     // Data inicial: 13 de julho de 2024
-    const dataInicial = new Date('2024-07-13T19:00:00');
+    const dataInicial = new Date('2023-07-13T19:00:00');
 
     // Função para calcular a diferença
     function atualizarContagem() {

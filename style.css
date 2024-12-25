@@ -90,6 +90,7 @@ body {
     width: 40rem;
     font-size: 1rem;
     padding-bottom: 2rem;
+    margin: 0 auto;
 }
 
 .instrucoes {
@@ -215,5 +216,17 @@ footer {
         justify-content: center; /* Alinha verticalmente o conteúdo */
         align-items: center; /* Alinha horizontalmente o conteúdo */
         height: 100vh; /* Garante que a altura ocupe toda a tela */
+    }
+
+    .instrucoes{
+        width: 90%;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .contagem2{
+        width: 90%;
+        text-align: center;
+        margin: 0 auto;
     }
 }
